@@ -28,7 +28,7 @@ export default {
 </script>
 
 <style scoped lang="scss">
-.Search {
+.filter {
   width: 400px;
   margin: 3rem auto 0;
   input {
@@ -37,6 +37,8 @@ export default {
     border: none;
     border-radius: 10px;
     padding: 0 0.5rem;
+    color:#00ffff;
+    background:#262525;
   }
 }
 </style>
