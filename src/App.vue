@@ -1,26 +1,83 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div class="prin">
+    <h1>
+      API Rick and Morty
+    </h1>
+    <Filter-nombre />
+    <Filter-status />
+    <!-- <List /> -->
+    <Prueab />
+  </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-
+import FilterNombre from "@/components/FilterNombre";
+import Prueab from "@/components/Prueab";
+// import List from "@/components/List";
+import FilterStatus from "@/components/FilterStatus";
 export default {
-  name: 'App',
+  name: "App",
   components: {
-    HelloWorld
-  }
-}
+    // List,
+    FilterStatus,
+    FilterNombre,
+    Prueab,
+  },
+};
 </script>
 
 <style lang="scss">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "poppins", sans-serif;
+}
+body {
+  background: #000;
+  color: #00ffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+h1 {
   text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin: 12px;
+}
+@media (max-width: 991px) {
+  .card {
+    position: relative;
+    width: auto;
+    max-width: 660px;
+    transition: 0.9s;
+    align-items: flex-start;
+    &:hover {
+      height: 450px;
+      img {
+        left: 80%;
+      }
+    }
+    .content__card {
+      // position: relative;
+      width: 100%;
+      left: 0;
+      padding: 40px;
+      // transition: 0.9s;
+    }
+  }
+  @media (max-width: 420px) {
+    .card{
+      .content__card{
+        width:100%;
+        left:0;
+        padding:30px
+      }
+      
+
+    }
+  }
 }
 </style>
