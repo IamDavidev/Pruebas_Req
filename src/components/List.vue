@@ -14,25 +14,12 @@
 </template>
 
 <script>
-import CardCharacters from "@/components/CardCharacters";
-import { computed, onMounted } from "vue";
-import { useStore } from "vuex";
+
 export default {
   components: {
     CardCharacters,
   },
-  setup() {
-    const store = useStore();
-    const characters = computed(() => {
-      return store.state.charactersFilter;
-    });
-    onMounted(() => {
-      store.dispatch("getCharacter");
-    });
-    return {
-      characters,
-    };
-  },
+
 };
 </script>
 

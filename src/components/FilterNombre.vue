@@ -27,12 +27,12 @@ export default {
 };
 </script>
 
-<style lang="scss">
+<style scoped lang="scss">
 .Search {
   width: 400px;
   margin: 3rem auto 0;
   input {
-    height: 53;
+    height: 53px;
     width: 400px;
     border: none;
     border-radius: 10px;

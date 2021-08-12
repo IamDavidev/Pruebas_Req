@@ -1,5 +1,6 @@
 <template>
   <div class="prin">
+    <!-- <Navbar /> -->
     <h1>
       API Rick and Morty
     </h1>
@@ -15,6 +16,7 @@ import FilterNombre from "@/components/FilterNombre";
 import Prueab from "@/components/Prueab";
 // import List from "@/components/List";
 import FilterStatus from "@/components/FilterStatus";
+// import Navbar from './components/Navbar.vue';
 export default {
   name: "App",
   components: {
@@ -22,6 +24,7 @@ export default {
     FilterStatus,
     FilterNombre,
     Prueab,
+    // Navbar,
   },
 };
 </script>
@@ -46,38 +49,5 @@ h1 {
   font-weight: bold;
   text-transform: uppercase;
   margin: 12px;
-}
-@media (max-width: 991px) {
-  .card {
-    position: relative;
-    width: auto;
-    max-width: 660px;
-    transition: 0.9s;
-    align-items: flex-start;
-    &:hover {
-      height: 450px;
-      img {
-        left: 80%;
-      }
-    }
-    .content__card {
-      // position: relative;
-      width: 100%;
-      left: 0;
-      padding: 40px;
-      // transition: 0.9s;
-    }
-  }
-  @media (max-width: 420px) {
-    .card{
-      .content__card{
-        width:100%;
-        left:0;
-        padding:30px
-      }
-      
-
-    }
-  }
 }
 </style>
